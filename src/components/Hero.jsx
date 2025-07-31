@@ -2,7 +2,7 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import heroimg from "../assets/herokali2.png";
+import heroimg from "../assets/herokali.png";
 
 const Hero = () => {
   // Animation variants for staggering children
