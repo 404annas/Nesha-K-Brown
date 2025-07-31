@@ -1,11 +1,10 @@
 import {
   FaPhone,
   FaEnvelope,
-  FaMapMarkerAlt,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaFacebookF,
+  FaYoutube
 } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsCrosshair2 } from "react-icons/bs";
@@ -30,7 +29,7 @@ const Sidebar = ({ isOpen, onClose }) => {
         } flex flex-col`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-4 border-b bg-[#EDEDED]">
+        <div className="flex items-center justify-between px-4 py-7 border-b bg-[#EDEDED]">
           <img
             src="https://reeni-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimages%2Flogo%2Flogo-white.png&w=128&q=75"
             alt="Logo"
@@ -72,9 +71,9 @@ const Sidebar = ({ isOpen, onClose }) => {
               <div className="flex flex-col">
                 <p className="text-[#7E1616] text-md rubik">CALL NOW</p>
                 <span className="relative inline-block cursor-pointer group raj-medium text-md text-black">
-                  <span className="relative z-10 transition-colors duration-300">
-                    +123 456 7890
-                  </span>
+                  <a href="tel:225-453-4045"><span className="relative z-10 transition-colors duration-300">
+                    +225 453 4045
+                  </span></a>
                   <span
                     className="
       absolute left-0 bottom-0 h-[2px] bg-black w-full
@@ -94,9 +93,9 @@ const Sidebar = ({ isOpen, onClose }) => {
               <div className="flex flex-col">
                 <p className="text-[#7E1616] text-md rubik">MAIL</p>
                 <span className="relative inline-block cursor-pointer group raj-medium text-md text-black">
-                  <span className="relative z-10 transition-colors duration-300">
-                    info@example.com
-                  </span>
+                  <a href="mailto:nesha@weconquer.org"><span className="relative z-10 transition-colors duration-300">
+                    nesha@weconquer.org
+                  </span></a>
                   <span
                     className="
       absolute left-0 bottom-0 h-[2px] bg-black w-full
@@ -117,7 +116,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                 <p className="text-[#7E1616] text-md rubik">ADDRESS</p>
                 <span className="relative inline-block cursor-pointer group raj-medium text-md text-black">
                   <span className="relative z-10 transition-colors duration-300">
-                    123 Street, City
+                    5536 Superior Dr STE C Baton Rouge La 70816
                   </span>
                   <span
                     className="
@@ -139,18 +138,18 @@ const Sidebar = ({ isOpen, onClose }) => {
 
           {/* Social Icons */}
           <div className="flex gap-3">
-            <p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+            <a href="https://www.instagram.com/neshakbrown/"><p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
               <FaInstagram />
-            </p>
-            <p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+            </p></a>
+            <a href="https://www.linkedin.com/in/dymoneshabrown/"><p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
               <FaLinkedinIn />
-            </p>
-            <p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
-              <FaTwitter />
-            </p>
-            <p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+            </p></a>
+            <a href="https://www.youtube.com/@neshakbrown"><p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+              <FaYoutube />
+            </p></a>
+            <a href="https://www.facebook.com/dymonesha.brown/"><p className=" bg-gray-200 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
               <FaFacebookF />
-            </p>
+            </p></a>
           </div>
         </div>
       </div>

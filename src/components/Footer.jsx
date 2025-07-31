@@ -3,8 +3,8 @@ import logo from "../assets/logo.png";
 import {
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaFacebookF,
+  FaYoutube,
 } from "react-icons/fa";
 import {
   FaMapMarkerAlt,
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-10">
+      <div className="flex justify-between pt-10">
         <div className="flex flex-col gap-4">
           <img className="w-60" src={logo} alt="Logo" />
           <p className="rubik max-w-md">
@@ -39,18 +39,26 @@ const Footer = () => {
             community change.
           </p>
           <div className="flex items-center gap-2 text-xl">
-            <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
-              <FaInstagram />
-            </p>
-            <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
-              <FaLinkedinIn />
-            </p>
-            <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
-              <FaTwitter />
-            </p>
-            <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
-              <FaFacebookF />
-            </p>
+            <a href="https://www.instagram.com/neshakbrown/">
+              <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
+                <FaInstagram />
+              </p>
+            </a>
+            <a href="https://www.linkedin.com/in/dymoneshabrown/">
+              <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
+                <FaLinkedinIn />
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@neshakbrown">
+              <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
+                <FaYoutube />
+              </p>
+            </a>
+            <a href="https://www.facebook.com/dymonesha.brown/">
+              <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
+                <FaFacebookF />
+              </p>
+            </a>
           </div>
         </div>
         <div className="flex flex-col gap-2">

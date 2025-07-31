@@ -8,8 +8,8 @@ import logo from "../assets/logo.png";
 import {
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaFacebookF,
+  FaYoutube
 } from "react-icons/fa";
 import { RiMenu3Fill } from "react-icons/ri";
 import Sidebar from "./Sidebar";
@@ -109,18 +109,18 @@ const Navbar = () => {
           <NavItem label="Contact" />
         </div>
         <div className="flex items-center gap-2">
-          <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+          <a href="https://www.instagram.com/neshakbrown/"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
             <FaInstagram />
-          </p>
-          <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+          </p></a>
+          <a href="https://www.linkedin.com/in/dymoneshabrown/"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
             <FaLinkedinIn />
-          </p>
-          <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
-            <FaTwitter />
-          </p>
-          <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+          </p></a>
+          <a href="https://www.youtube.com/@neshakbrown"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+            <FaYoutube />
+          </p></a>
+          <a href="https://www.facebook.com/dymonesha.brown/"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
             <FaFacebookF />
-          </p>
+          </p></a>
 
           {/* Menu Button for Sidebar */}
           <p
