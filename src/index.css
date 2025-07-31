@@ -10,7 +10,7 @@
 .dancing {
   font-family: "Borel", cursive;
 }
-.raj-regular {
+body {
   font-family: "Rajdhani", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -42,7 +42,7 @@
 }
 
 .polygon-bg {
-  background: linear-gradient(135deg, #7E1616 50%, #EACCC2 50%);
+  background: linear-gradient(135deg, #7e1616 50%, #eaccc2 50%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 

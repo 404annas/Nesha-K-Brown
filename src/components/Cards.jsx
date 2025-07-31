@@ -146,7 +146,7 @@ const ModernServicesCards = () => {
                 </span>
               </div>
 
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+              <h2 className="text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight">
                 <span className="text-[#7E1616]">EMPOWERING</span>{" "}
                 <span className="text-gray-600">GROWTH</span>
                 <br />

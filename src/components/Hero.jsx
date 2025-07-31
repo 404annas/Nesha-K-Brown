@@ -1,7 +1,8 @@
+import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import heroimg from "../assets/heroimg.png";
+import heroimg from "../assets/herokali2.png";
 
 const Hero = () => {
   // Animation variants for staggering children
@@ -105,7 +106,7 @@ const Hero = () => {
             src={heroimg}
             loading="eager"
             alt="Man"
-            className="object-cover relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-4xl translate-y-8"
+            className="z-10  sm:max-w-sm md:max-w-md lg:max-w-3xl translate-y-8"
           />
 
           <motion.h2
@@ -137,9 +138,7 @@ const Hero = () => {
             style={{
               WebkitTextStroke: "2px #BD2F3E",
             }}
-          >
-            Consultant & Speaker
-          </motion.h2>
+          ></motion.h2>
         </motion.div>
       </motion.div>
     </div>
