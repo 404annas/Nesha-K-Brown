@@ -17,11 +17,11 @@ const Experience = () => {
   return (
     <section
       ref={ref}
-      className="bg-white px-4 sm:px-6 md:px-10 py-14 sm:py-16 md:py-20 lg:py-20 flex items-center justify-center"
+      className="bg-[white] px-4 sm:px-6 md:px-10 py-14 sm:py-16 md:py-20 lg:py-20 flex items-center justify-center"
     >
       <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center md:items-stretch justify-between gap-8 md:gap-10">
         {/* LEFT DIV */}
-        <div className="flex flex-col w-full lg:w-1/2 space-y-6 sm:space-y-8 bg-[#F4F4F4] rounded-2xl sm:rounded-3xl py-10 sm:py-12 md:py-14 px-6 sm:px-8 md:px-10">
+        <div className="flex flex-col w-full lg:w-1/2 space-y-6 sm:space-y-8 bg-[#EACCC2] rounded-2xl sm:rounded-3xl py-10 sm:py-12 md:py-14 px-6 sm:px-8 md:px-10">
           <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-6 sm:gap-10">
             <h1 className="text-[80px] sm:text-[120px] md:text-[150px] lg:text-[180px] leading-none raj-bold text-[#7E1616]">
               {inView ? <CountUp end={25} duration={4} /> : 0}
@@ -47,7 +47,7 @@ const Experience = () => {
                 px-6 sm:px-8 md:px-10
                 rounded-2xl sm:rounded-3xl
                 border-b-2 border-r-2 border-[#7E1616]
-                bg-[#F4F4F4]
+                bg-[#EACCC2]
                 transition-all
                 duration-500
                 overflow-hidden
