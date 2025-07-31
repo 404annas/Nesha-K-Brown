@@ -6,6 +6,12 @@ import {
   FaTwitter,
   FaFacebookF,
 } from "react-icons/fa";
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -26,9 +32,9 @@ const Footer = () => {
       </div>
 
       <div className="flex items-center justify-between pt-10">
-        <div className="flex flex-col gap-4 w-1/3">
+        <div className="flex flex-col gap-4">
           <img className="w-60" src={logo} alt="Logo" />
-          <p className="rubik">
+          <p className="rubik max-w-md">
             Her work integrates economic sustainability with meaningful
             community change.
           </p>
@@ -47,8 +53,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-2 w-1/3">
-          <h1 className="text-[#7E1616] raj-bold text-2xl">Quick Links</h1>
+        <div className="flex flex-col gap-2">
+          <h1 className="text-[#7E1616] raj-bold text-3xl">Quick Links</h1>
           <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
             Home
           </p>
@@ -68,8 +74,40 @@ const Footer = () => {
             Contact
           </p>
         </div>
-        <div className="flex flex-col gap-2 w-1/3">
-          <h1 className="text-[#7E1616] raj-bold text-2xl">Contact Info</h1>
+        <div className="flex flex-col gap-4">
+          <h1 className="text-[#7E1616] raj-bold text-3xl">Contact Info</h1>
+
+          <div className="flex gap-2 items-center">
+            <p className="text-[#7E1616] text-lg">
+              <FaMapMarkerAlt />
+            </p>
+            <p className="rubik">5536 Superior Dr STE C Baton Rouge La 70816</p>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <p className="text-[#7E1616] text-lg">
+              <FaPhoneAlt />
+            </p>
+            <a href="tel:225-453-4045">
+              <p className="rubik">225-453-4045</p>
+            </a>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <p className="text-[#7E1616] text-lg">
+              <FaEnvelope />
+            </p>
+            <a href="mailto:nesha@weconquer.org">
+              <p className="rubik">nesha@weconquer.org</p>
+            </a>
+          </div>
+
+          <div className="flex gap-2 items-center">
+            <p className="text-[#7E1616] text-lg">
+              <FaClock />
+            </p>
+            <p className="rubik">Mon - Fri: 08:00am - 05:00pm</p>
+          </div>
         </div>
       </div>
     </div>
