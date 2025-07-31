@@ -4,6 +4,7 @@ import {
   MdKeyboardArrowUp,
   MdArrowForwardIos,
 } from "react-icons/md";
+import logo from "../assets/logo.png";
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -18,7 +19,7 @@ const DropdownItem = ({ label }) => (
     className="
       group/item flex justify-between items-center px-4 py-2 cursor-pointer
       transition-all duration-300
-      hover:bg-[#EACCC2] hover:text-[#7E1616] hover:rounded-lg
+       hover:text-[#7E1616] hover:rounded-lg
     "
   >
     <span className="transition-all duration-300 group-hover/item:translate-x-2">
@@ -46,10 +47,10 @@ const NavItem = ({ label, hasDropdown, dropdownItems = [] }) => {
       onMouseLeave={() => setOpen(false)}
     >
       <div
-        className={`flex items-center px-3 py-2 cursor-pointer transition-all duration-300 rounded ${
+        className={`flex items-center px-3 py-1  cursor-pointer transition-all duration-300 rounded-full ${
           open
             ? "bg-[#EACCC2] text-[#7E1616]"
-            : "hover:bg-[#EACCC2] hover:text-[#7E1616]"
+            : "hover:bg-[#EACCC2] text-[#7E1616]"
         }`}
       >
         <span>{label}</span>
@@ -82,16 +83,12 @@ const Navbar = () => {
     <>
       <nav
         className={`sticky top-0 left-0 z-50 flex items-center justify-between px-10 py-4 transition-all duration-300 ${
-          isScrolled ? "bg-[#e9e8e8] shadow-xl" : "bg-white"
+          isScrolled ? "bg-secondary  shadow-xl" : "bg-white"
         }`}
       >
         {" "}
-        <img
-          src="https://reeni-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimages%2Flogo%2Flogo-white.png&w=128&q=75"
-          alt="Logo"
-          className="h-10"
-        />
-        <div className="hidden md:flex items-center gap-4 raj-bold">
+        <img src={logo} alt="Logo" className="w-auto h-16" />
+        <div className="hidden md:flex items-center gap-4 raj-semibold">
           <NavItem label="Home" />
           <NavItem label="About" />
           <NavItem
