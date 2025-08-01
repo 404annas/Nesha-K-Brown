@@ -8,6 +8,8 @@ import {
 } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { BsCrosshair2 } from "react-icons/bs";
+import logo from "../assets/logo.png";
+import heroImg from "../assets/heroimg.png";
 
 const Sidebar = ({ isOpen, onClose }) => {
   return (
@@ -29,37 +31,35 @@ const Sidebar = ({ isOpen, onClose }) => {
         } flex flex-col`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-7 border-b bg-[#EDEDED]">
+        <div className="flex items-center justify-between px-4 py-[31px] border-b bg-[#EDEDED]">
           <img
-            src="https://reeni-nextjs.vercel.app/_next/image?url=%2Fassets%2Fimages%2Flogo%2Flogo-white.png&w=128&q=75"
+            src={logo}
             alt="Logo"
-            className=""
+            className="w-40"
           />
           <button
             onClick={onClose}
-            className="text-xl text-gray-700 bg-gray-300 rounded-full p-2 hover:text-[white] hover:bg-[#7E1616] transition-all duration-300 cursor-pointer"
+            className="text-sm text-gray-700 bg-[#EACCC2] rounded-full p-2 hover:text-[white] hover:bg-[#7E1616] transition-all duration-300 cursor-pointer"
           >
             <AiOutlineClose />
           </button>
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto px-6 py-8">
+        <div className="flex-1 overflow-y-auto px-6 py-4">
           {/* Image */}
           <img
-            src="https://reeni-nextjs.vercel.app/assets/images/logo/man.png"
+            src={heroImg}
             alt="Sidebar Banner"
-            className="w-full mb-4"
+            className="w-80 mx-auto rounded-full mb-4"
           />
 
           {/* Heading and para */}
-          <h2 className="text-xl font-bold mb-4 rubik">
-            Freelancer delivering exceptional Webflow, and Next.js solutions.
+          <h2 className="text-3xl mb-4 raj-medium">
+            Nesha leads <span className="raj-semibold">Conquer & Prosper eLearning</span>
           </h2>
           <p className="text-md text-gray-600 mb-6 rubik">
-            I am a skilled freelancer specializing in Webflow development, Figma
-            design, and Next.js projects. I deliver creative, dynamic, and
-            user-centric web solutions.
+            She’s more than just a strategist—she’s a force for good, making the business of doing good look both fun and wildly successful.
           </p>
 
           {/* Contact details */}

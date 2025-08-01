@@ -5,7 +5,7 @@ const Text = () => {
       <img
         src="https://gracefulpixels.com/mindly/wp-content/uploads/2021/07/left-quotes-sign.png"
         alt="quote background"
-        className="absolute top-1/2 left-1/2 w-64 sm:w-80 lg:w-[300px] opacity-10 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
+        className="absolute top-1/2 left-1/2 w-52 sm:w-80 lg:w-[300px] opacity-10 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
       />
 
       {/* Text Content */}

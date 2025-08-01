@@ -15,10 +15,11 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-[#ffeee9] px-10 py-10">
-      <div className="bg-gradient-to-r from-[#EACCC2] to-[#d88367] gap-10 px-10 flex items-center justify-between rounded-t-3xl">
-        <div className="flex flex-col items-start gap-2 w-[75%]">
-          <h1 className="text-5xl text-[#7E1616] raj-bold">
+    <div className="bg-[#ffeee9] px-4 sm:px-6 lg:px-10 py-10">
+      {/* Top Promo Section */}
+      <div className="bg-gradient-to-r from-[#EACCC2] to-[#d88367] rounded-t-3xl flex flex-col lg:flex-row items-center justify-between gap-6 px-6 sm:px-10 py-6 lg:py-0">
+        <div className="flex flex-col items-start gap-2 w-full lg:w-[75%]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#7E1616] raj-bold">
             Nesha Mission is to Empower individuals and organizations
           </h1>
           <p className="text-[black] rubik text-base">
@@ -26,19 +27,21 @@ const Footer = () => {
             meaningful community impact.
           </p>
         </div>
-        <div className="w-[25%] -translate-y-20">
-          <img className="w-60" src={footerImg} alt="Nesha Image" />
+        <div className="w-full lg:w-[25%] lg:-translate-y-20 flex justify-center">
+          <img className="w-40 sm:w-52 lg:w-60" src={footerImg} alt="Nesha Image" />
         </div>
       </div>
 
-      <div className="flex justify-between pt-10">
-        <div className="flex flex-col gap-4">
-          <img className="w-60" src={logo} alt="Logo" />
-          <p className="rubik max-w-md">
+      {/* Main Footer Section */}
+      <div className="flex flex-col lg:flex-row justify-between pt-10 gap-10 lg:gap-6">
+        {/* Logo + Socials */}
+        <div className="flex flex-col gap-4 lg:max-w-sm">
+          <img className="w-48 sm:w-56" src={logo} alt="Logo" />
+          <p className="rubik">
             Her work integrates economic sustainability with meaningful
             community change.
           </p>
-          <div className="flex items-center gap-2 text-xl">
+          <div className="flex items-center gap-3 text-lg">
             <a href="https://www.instagram.com/neshakbrown/">
               <p className="bg-[#d88367] text-[#7E1616] p-3 rounded-full hover:bg-[#EACCC2] transition-all duration-300 cursor-pointer">
                 <FaInstagram />
@@ -61,59 +64,45 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-2">
-          <h1 className="text-[#7E1616] raj-bold text-3xl">Quick Links</h1>
-          <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
-            Home
-          </p>
-          <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
-            About
-          </p>
-          <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
-            Services
-          </p>
-          <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
-            Blog
-          </p>
-          <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
-            Project
-          </p>
-          <p className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300">
-            Contact
-          </p>
-        </div>
-        <div className="flex flex-col gap-4">
-          <h1 className="text-[#7E1616] raj-bold text-3xl">Contact Info</h1>
 
-          <div className="flex gap-2 items-center">
-            <p className="text-[#7E1616] text-lg">
-              <FaMapMarkerAlt />
+        {/* Quick Links */}
+        <div className="flex flex-col gap-2">
+          <h1 className="text-[#7E1616] raj-bold text-2xl sm:text-3xl">Quick Links</h1>
+          {["Home", "About", "Services", "Blog", "Project", "Contact"].map((item, index) => (
+            <p
+              key={index}
+              className="rubik cursor-pointer hover:text-[#7E1616] transition-all duration-300"
+            >
+              {item}
             </p>
+          ))}
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex flex-col gap-4">
+          <h1 className="text-[#7E1616] raj-bold text-2xl sm:text-3xl">Contact Info</h1>
+
+          <div className="flex gap-2 items-start">
+            <FaMapMarkerAlt className="text-[#7E1616] text-lg mt-1" />
             <p className="rubik">5536 Superior Dr STE C Baton Rouge La 70816</p>
           </div>
 
           <div className="flex gap-2 items-center">
-            <p className="text-[#7E1616] text-lg">
-              <FaPhoneAlt />
-            </p>
+            <FaPhoneAlt className="text-[#7E1616] text-lg" />
             <a href="tel:225-453-4045">
               <p className="rubik">225-453-4045</p>
             </a>
           </div>
 
           <div className="flex gap-2 items-center">
-            <p className="text-[#7E1616] text-lg">
-              <FaEnvelope />
-            </p>
+            <FaEnvelope className="text-[#7E1616] text-lg" />
             <a href="mailto:nesha@weconquer.org">
               <p className="rubik">nesha@weconquer.org</p>
             </a>
           </div>
 
           <div className="flex gap-2 items-center">
-            <p className="text-[#7E1616] text-lg">
-              <FaClock />
-            </p>
+            <FaClock className="text-[#7E1616] text-lg" />
             <p className="rubik">Mon - Fri: 08:00am - 05:00pm</p>
           </div>
         </div>

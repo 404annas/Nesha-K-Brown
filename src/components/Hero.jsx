@@ -1,4 +1,3 @@
-import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -66,11 +65,10 @@ const Hero = () => {
           <h1 className="text-2xl raj-regular uppercase sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#7E1616] ">
             <Typewriter
               words={[
-                "Coaching.",
-                "Speaking",
-                "Project Leadership.",
-                "Real Result.",
-                "",
+                "Coacher.",
+                "Speaker",
+                "Project Leadershiper.",
+                "Real Resultant.",
               ]}
               loop
               cursor
@@ -81,9 +79,7 @@ const Hero = () => {
             />
           </h1>
           <p className="raj-semibold text-gray-500 text-base sm:text-lg md:text-lg lg:text-xl">
-            A personal portfolio is a collection of your work, achievements, and
-            skills that highlights your abilities and professional growth. It
-            serves as
+            On a mission to increase financial literacy, workforce development, and boost business development skills in underprivileged communities.
           </p>
           <button className="group mt-4 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-br from-primary  to-pink-400 text-white rounded-full hover:bg-[#701e1e] transition-all duration-300 rubik font-medium text-sm sm:text-md flex items-center justify-center overflow-hidden">
             <span className="relative flex items-center gap-2">

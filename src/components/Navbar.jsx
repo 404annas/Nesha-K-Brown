@@ -4,24 +4,19 @@ import {
   MdKeyboardArrowUp,
   MdArrowForwardIos,
 } from "react-icons/md";
-import logo from "../assets/logo.png";
 import {
   FaInstagram,
   FaLinkedinIn,
   FaFacebookF,
-  FaYoutube
+  FaYoutube,
 } from "react-icons/fa";
-import { RiMenu3Fill } from "react-icons/ri";
+import { Menu, X } from "lucide-react"; // Lucide icons
+import logo from "../assets/logo.png";
 import Sidebar from "./Sidebar";
+import MobileNav from "./MobileNav"; // new sidebar
 
 const DropdownItem = ({ label }) => (
-  <div
-    className="
-      group/item flex justify-between items-center px-4 py-2 cursor-pointer
-      transition-all duration-300
-       hover:text-[#7E1616] hover:rounded-lg
-    "
-  >
+  <div className="group/item flex justify-between items-center px-4 py-2 cursor-pointer transition-all duration-300 hover:text-[#7E1616] hover:rounded-lg">
     <span className="transition-all duration-300 group-hover/item:translate-x-2">
       {label}
     </span>
@@ -47,7 +42,7 @@ const NavItem = ({ label, hasDropdown, dropdownItems = [] }) => {
       onMouseLeave={() => setOpen(false)}
     >
       <div
-        className={`flex items-center px-3 py-1  cursor-pointer transition-all duration-300 rounded-full ${
+        className={`flex items-center px-3 py-1 cursor-pointer transition-all duration-300 rounded-full ${
           open
             ? "bg-[#EACCC2] text-[#7E1616]"
             : "hover:bg-[#EACCC2] text-[#7E1616]"
@@ -68,27 +63,37 @@ const NavItem = ({ label, hasDropdown, dropdownItems = [] }) => {
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [isMobileNavOpen]);
+
   return (
     <>
       <nav
-        className={`sticky top-0 left-0 z-50 flex items-center justify-between px-10 py-4 transition-all duration-300 ${
-          isScrolled ? "bg-secondary  shadow-xl" : "bg-white"
+        className={`sticky top-0 left-0 z-50 flex items-center justify-between px-6 sm:px-10 py-4 transition-all duration-300 ${
+          isScrolled ? "bg-secondary shadow-xl" : "bg-white"
         }`}
       >
-        {" "}
-        <img src={logo} alt="Logo" className="w-auto h-16" />
-        <div className="hidden md:flex items-center gap-4 raj-semibold">
+        {/* Logo */}
+        <img src={logo} alt="Logo" className="w-40 lg:w-auto  sm:h-16" />
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex items-center gap-4 raj-semibold">
           <NavItem label="Home" />
           <NavItem label="About" />
           <NavItem
@@ -108,32 +113,68 @@ const Navbar = () => {
           />
           <NavItem label="Contact" />
         </div>
-        <div className="flex items-center gap-2">
-          <a href="https://www.instagram.com/neshakbrown/"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
-            <FaInstagram />
-          </p></a>
-          <a href="https://www.linkedin.com/in/dymoneshabrown/"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
-            <FaLinkedinIn />
-          </p></a>
-          <a href="https://www.youtube.com/@neshakbrown"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
-            <FaYoutube />
-          </p></a>
-          <a href="https://www.facebook.com/dymonesha.brown/"><p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
-            <FaFacebookF />
-          </p></a>
 
-          {/* Menu Button for Sidebar */}
+        {/* Right Section */}
+        <div className="flex items-center gap-2">
+          {/* Social Icons - Desktop Only */}
+          <div className="hidden lg:flex gap-2">
+            <a href="https://www.instagram.com/neshakbrown/">
+              <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+                <FaInstagram />
+              </p>
+            </a>
+            <a href="https://www.linkedin.com/in/dymoneshabrown/">
+              <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+                <FaLinkedinIn />
+              </p>
+            </a>
+            <a href="https://www.youtube.com/@neshakbrown">
+              <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+                <FaYoutube />
+              </p>
+            </a>
+            <a href="https://www.facebook.com/dymonesha.brown/">
+              <p className="bg-gray-100 rounded-full p-3 cursor-pointer text-black transition-all duration-300 hover:bg-[#7E1616] hover:text-white">
+                <FaFacebookF />
+              </p>
+            </a>
+          </div>
+
+          {/* Menu Icon for Desktop Sidebar */}
           <p
             onClick={() => setIsSidebarOpen(true)}
-            className="border-2 rounded-full p-2 cursor-pointer ml-5 text-xl transition-all duration-300 bg-[#7E1616] text-white border-[#7E1616] hover:bg-[#EACCC2] hover:text-[#7E1616]"
+            className="hidden lg:flex border-2 rounded-full p-2 cursor-pointer text-xl transition-all duration-300 bg-[#7E1616] text-white border-[#7E1616] hover:bg-[#EACCC2] hover:text-[#7E1616]"
           >
-            <RiMenu3Fill />
+            <Menu />
           </p>
+
+          {/* Mobile Menu Icon */}
+          <button
+            onClick={() => setIsMobileNavOpen(true)}
+            className="lg:hidden p-2 rounded-full bg-[#7E1616] text-white hover:bg-[#EACCC2] hover:text-[#7E1616] transition-all duration-300"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
         </div>
       </nav>
 
-      {/* Sidebar */}
+      {/* Desktop Sidebar (lg and up) */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+
+      {/* Mobile Sidebar (below lg) */}
+      {/* Overlay Behind Mobile Nav */}
+      {isMobileNavOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
+          onClick={() => setIsMobileNavOpen(false)}
+        />
+      )}
+
+      {/* Mobile Sidebar (below lg) */}
+      <MobileNav
+        isOpen={isMobileNavOpen}
+        onClose={() => setIsMobileNavOpen(false)}
+      />
     </>
   );
 };
