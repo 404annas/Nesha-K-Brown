@@ -55,7 +55,7 @@ const Hire = () => {
         {/* EXISTING RIGHT DIV */}
         <div className="relative flex-1 space-y-8 pl-4 sm:pl-6 md:pl-8">
           {/* Timeline Vertical Line */}
-          <div className="absolute top-10 sm:top-10 md:top-10 lg:top-10 left-1 sm:left-3 md:left-[19px] lg:left-5 w-[2px] h-[580px] sm:h-[470px] md:h-[670px] lg:h-[480px] bg-[#BD2F3E]" />
+          <div className="absolute top-10 sm:top-10 md:top-10 lg:top-10 left-1 sm:left-3 md:left-[19px] lg:left-5 w-[2px] h-[560px] sm:h-[470px] md:h-[670px] lg:h-[480px] bg-[#BD2F3E]" />
 
           {data.items.map((item, index) => (
             <div key={index} className="relative flex items-start space-x-4">
